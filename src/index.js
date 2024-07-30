@@ -21,7 +21,8 @@ for (let i = 0; i < numberOfColumns; i++) {
     cardSpace.classList.add('card');
     cardSpace.id = i + 1 + '_card-space';
 
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
         btn.classList.add('hide-btn');
     
         btnSubmit.textContent = 'Add Card';
@@ -31,7 +32,8 @@ for (let i = 0; i < numberOfColumns; i++) {
     })
 
     if (btnSubmit) {
-        btnSubmit.addEventListener('click', () => {
+        btnSubmit.addEventListener('click', (e) => {
+            e.preventDefault();
             const card = document.createElement('div');
             card.classList.add('card');
             card.textContent = cardSpace.value;
@@ -49,12 +51,16 @@ console.log(allCards.length);
 
 for (let i = 0; i < allCards.length; i++) {
     const card = allCards[i];
+    const cross = document.createElement('div');
+    cross.classList.add('cross');
+    cross.textContent = '×';
+
     card.addEventListener('mouseover', () => {
-        const cross = document.createElement('div');
-        cross.classList.add('cross');
         card.appendChild(cross);
-        cross.textContent = '×';
     })
 
+    card.addEventListener('mouseout', () => {
+        cross.remove();
+    })
 }
 
