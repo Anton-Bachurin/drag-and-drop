@@ -1,0 +1,73 @@
+body{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(97, 97, 216);
+    justify-content: space-between;
+}
+
+.column {
+    width: 31%;
+    background-color: rgb(220, 204, 204);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card {
+    background-color: white;
+    border-bottom: gray solid 3px;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+}
+
+.add-card {
+    border: none;
+    background-color: transparent;
+    color: gray;
+    padding-top: 15px;
+}
+
+.hide-btn {
+    display: none;
+}
+
+.card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-submit {
+    background-color: green;
+    color: white;
+    border: none;
+    border-bottom: rgb(1, 69, 1) solid 3px;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 16px;
+    width: 100px;
+}
+
+.cross {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(222, 207, 207);
+    color: gray;
+    position: relative;
+    top: 5%;
+    right: 10%;
+    text-align: center;
+}
+
